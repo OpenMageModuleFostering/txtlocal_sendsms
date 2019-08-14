@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <txtlocal_sendsms>
-            <active>true</active>
-            <codePool>local</codePool>
-        </txtlocal_sendsms>
-    </modules>
-</config> 
