@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+		<txtlocal translate="label" module="sendsms">
+            <label>TextLocal</label>
+            <sort_order>300</sort_order>
+		</txtlocal>
+    </tabs>
+	<sections>
+        <buycredits translate="label" module="sendsms">
+            <label>Buy Credits</label>
+            <tab>txtlocal</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>190</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <info>
+                    <frontend_model>sendsms/system_config_buycredits</frontend_model>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </info>
+            </groups>
+        </buycredits>
+		<sendsms translate="label" module="sendsms">
+			<label>Settings</label>
+			<tab>txtlocal</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>200</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<info>
+                    <frontend_model>sendsms/system_config_info</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </info>
+				<general translate="label">
+					<label>Credentials</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<username translate="label">
+							<label>TextLocal Username</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</username>
+						<password translate="label">
+							<label>TextLocal API Hash</label>
+							<frontend_type>password</frontend_type>
+                            <comment>Found in your TextLocal Messenger under - Help > All Documentation</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</password>
+					</fields>
+				</general>
+				<orders translate="label">
+					<label>Orders</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>15</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled</label>
+							<comment>Automatically sends a text message to the customer when an order is made</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</enabled>
+                        <contacts translate="label comment">
+                            <label>Contacts</label>
+                            <comment>Adds a number to your group when an order is placed</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </contacts>
+						<sender translate="label comment">
+							<label>Sender Name</label>
+                            <comment>Name of the sender - Max 13 Characters</comment>
+							<validate>required-entry</validate>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sender>
+						<message translate="label comment">
+							<label>Message</label>
+							<comment>Message Template (160 characters)</comment>
+							<tooltip>{{firstname}} = First Name</tooltip>
+							<validate>required-entry</validate>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</message>
+					</fields>
+				</orders>
+				<order_hold translate="label">
+					<label>Order Hold</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled</label>
+							<comment>Automatically sends a text message to the customer when an order is placed on hold</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</enabled>
+						<sender translate="label comment">
+							<label>Sender Name</label>
+                            <comment>Name of the sender - Max 13 Characters</comment>
+							<validate>required-entry</validate>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sender>
+						<message translate="label comment">
+							<label>Message</label>
+							<comment>Message Template (160 characters)</comment>
+							<tooltip>{{firstname}} = First Name {{order_id}} = Order Id</tooltip>
+							<validate>required-entry</validate>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</message>
+					</fields>
+				</order_hold>
+				<order_unhold translate="label">
+					<label>Order Unhold</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>25</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled</label>
+							<comment>Automatically sends a text message to the customer when an order has been released from holding status</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</enabled>
+						<sender translate="label comment">
+							<label>Sender Name</label>
+                            <comment>Name of the sender - Max 13 Characters</comment>
+							<validate>required-entry</validate>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sender>
+						<message translate="label comment">
+							<label>Message</label>
+							<comment>Message Template (160 characters)</comment>
+							<tooltip>{{firstname}} = First Name {{order_id}} = Order Id</tooltip>
+							<validate>required-entry</validate>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</message>
+					</fields>
+				</order_unhold>
+				<order_canceled translate="label">
+					<label>Order Cancelled</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>30</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled</label>
+							<comment>Automatically sends a text message to the customer when an order has been canceled</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</enabled>
+						<sender translate="label comment">
+							<label>Sender Name</label>
+							<comment>Name of the sender - Max 13 Characters</comment>
+							<validate>required-entry</validate>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sender>
+						<message translate="label comment">
+							<label>Message</label>
+							<comment>Message Template (160 characters)</comment>
+							<tooltip>{{firstname}} = First Name {{order_id}} = Order Id</tooltip>
+							<validate>required-entry</validate>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</message>
+					</fields>
+				</order_canceled>
+				<shipments translate="label">
+					<label>Shipments</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>35</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled</label>
+							<comment>Automatically sends a text message to the customer when the shipment is made</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</enabled>
+						<sender translate="label comment">
+							<label>Sender Name</label>
+                            <comment>Name of the sender - Max 13 Characters</comment>
+							<validate>required-entry</validate>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</sender>
+						<message translate="label comment">
+							<label>Message</label>
+							<comment>Message Template (160 characters)</comment>
+							<tooltip>{{firstname}} = First Name {{order_id}} = Order Id</tooltip>
+							<validate>required-entry</validate>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</message>
+					</fields>
+				</shipments>
+                <contacts translate="label">
+                    <label>Contacts</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>35</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                    </fields>
+                </contacts>
+			</groups>
+		</sendsms>
+    </sections>
+</config>

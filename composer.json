@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/txtlocal_sendsms",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "A SMS extension, allowing messages to be sent when orders update using the Txtlocal system.",
+    "authors": [
+    {
+        "name": "Textlocal",
+        "email": "tech@txtlocal.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

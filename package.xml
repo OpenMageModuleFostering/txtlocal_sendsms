@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>txtlocal_sendsms</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>A SMS extension, allowing messages to be sent when orders update using the Txtlocal system.</summary>
+    <description>SendSMS uses the Txtlocal API to send messages to the customers handset when an order is either, placed, held, unheld or shipped.</description>
+    <notes>Initla Release</notes>
+    <authors><author><name>Textlocal</name><user>Textlocal</user><email>tech@txtlocal.com</email></author></authors>
+    <date>2014-01-08</date>
+    <time>14:09:23</time>
+    <contents><target name="magelocal"><dir name="txtlocal"><dir name="sendsms"><dir name="Block"><dir name="Adminhtml"><dir name="Sendsms"><dir name="Edit"><file name="Form.php" hash="52fddfb6cddf6dce8240de5eefad3e1e"/><dir name="Tab"><file name="Form.php" hash="c32af2969c7601037ab80b8fa0d79c8c"/></dir><file name="Tabs.php" hash="81b64aeffe439192b0b9ae1ea4860b8d"/></dir><file name="Edit.php" hash="02eeedabea09ebe73a97aaee55d426bc"/><file name="Grid.php" hash="9de03e783006a23e9c003841a4bfaf48"/></dir><file name="Sendsms.php" hash="45d7b1228ea8247dc6a6fdb18da7ac1b"/></dir><file name="Buttons.php" hash="8fae5d5b50150a9c145855a17dcabf2a"/><file name="Sendsms.php" hash="8ce10ae6c015820b0108a029d269179a"/><dir name="System"><dir name="Config"><file name="Buycredits.php" hash="9eed593919db4e53f73602ade5f18b22"/><file name="Info.php" hash="6b3f57fe9ca363ed2c3b6d10e5bd4b2c"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="720faa2ce03ff17baebee9c3b144c023"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Sendsms"><file name="Collection.php" hash="312eb4705c9202ba736fbe7531a0a93a"/></dir><file name="Sendsms.php" hash="517ba93245d84cde383e192966c2fdf0"/></dir><file name="Observer.php" hash="8ccff9952532afc3bcadb12436344105"/><file name="Sendsms.php" hash="5ae3a979f0c0367ac8efe8aafa2c1737"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="SendsmsController.php" hash="74d669ecb7245296944baa23e3da8d1a"/></dir><file name="IndexController.php" hash="35ab71b3ee2cf0842b7a7250aaafdade"/></dir><dir name="etc"><file name="config.xml" hash="4dc5073d4a0e50007ca4e0e80b0282ff"/><file name="system.xml" hash="4648722041959eb24aab5eb4e1b7d64d"/></dir><dir name="sql"><dir name="sendsms_setup"><file name="mysql4-install-1.0.0.php" hash="cb023dc60556fc7ec4d67cbe21b91cfb"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="txtlocal_sendsms.xml" hash="1c834f1147e4a94dbffaa7997693765e"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
