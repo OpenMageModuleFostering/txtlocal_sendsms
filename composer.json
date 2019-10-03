@@ -1,5 +1,5 @@
 {
-    "name": "OpenMageModuleFostering\/txtlocal_sendsms",
+    "name": "openmage-module-fostering\/txtlocal_sendsms",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
